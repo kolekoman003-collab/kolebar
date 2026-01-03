@@ -1,0 +1,111 @@
+.call-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1e88e5;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(30, 136, 229, 0.45);
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+.call-floating:hover {
+  background: #1565c0;
+  box-shadow: 0 8px 22px rgba(21, 101, 192, 0.55);
+  transform: scale(1.05);
+}.call-floating {
+  animation: pulseCall 1.8s infinite;
+}
+ 
+@keyframes pulseCall {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+h1 {
+  position: relative;
+  top: 25px;
+}
+h2 {
+  position: relative;
+  top: 10px;
+}
+.my-image {
+  width: 400px;
+  height: auto;
+}
+
+.glass-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px); /* افکت شیشه‌ای */
+  background: rgba(255, 255, 255, 0.25); /* شفاف با سفیدی کم */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 9999;
+}
+
+.glass-menu .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.glass-menu nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #000000;
+  transition: 0.3s;
+}
+
+.glass-menu nav a:hover {
+  color: #000000;
+}
+
+/* لوگو */
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+/* دکمه تماس داخل منو */
+.call-link {
+  background: #1e88e5;
+  padding: 8px 18px;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: 600;
+}
+@media (max-width: 600px) {
+  .glass-menu .container {
+    flex-direction: column;
+  }
+  .glass-menu nav a {
+    margin: 8px;
+  }
+}
+/* فونت متن سایت*/
+.slide-in {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 1s forwards;
+  font-family: "vazir";
+
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
